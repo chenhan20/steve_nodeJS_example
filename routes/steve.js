@@ -11,6 +11,17 @@ router.get('/login_post', function(req, res, next) {
 
 });
 
+router.get('/index', function(req, res, next) {
+  res.render('./main/index', { title: 'index' });
+
+});
+
+router.get('/TEST', function(req, res, next) {
+  res.render('./common/TEST', { title: 'test' });
+
+});
+
+
 
 
 module.exports = router;
