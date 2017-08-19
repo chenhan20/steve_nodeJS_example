@@ -16,8 +16,8 @@ router.get('/index', function(req, res, next) {
 
 });
 
-router.get('/TEST', function(req, res, next) {
-  res.render('./common/TEST', { title: 'test' });
+router.get('/react01', function(req, res, next) {
+  res.render('./common/react_example01', { title: 'react01' });
 
 });
 
