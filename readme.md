@@ -4,11 +4,11 @@
 
 ## 相關資料
 ### 使用工具及套件
-    - [Microsoft Visual Studio Code](https://code.visualstudio.com/)
-    - [Node.js](https://nodejs.org/en/)
-    - [Express](http://expressjs.com/zh-tw/)
-    - [Bootstrap](http://getbootstrap.com)
-    - [jQuery](http://www.jquery.com/)
-    - [Pug JS](https://pugjs.org/api/getting-started.html)
-    - [Markdown]http://dillinger.io/
+1. [Microsoft Visual Studio Code](https://code.visualstudio.com/)
+2. [Node.js](https://nodejs.org/en/)
+3. [Express](http://expressjs.com/zh-tw/)
+4. [Bootstrap](http://getbootstrap.com)
+5. [jQuery](http://www.jquery.com/)
+6. [Pug JS](https://pugjs.org/api/getting-started.html)
+7. [Markdown](http://dillinger.io/)
 
