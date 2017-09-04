@@ -12,8 +12,8 @@ block content
                         input.pass-reset-submit.btn.btn-success.btn-sm(type="submit", value="Submit")
                 .wrap
                     p.form-title
-                        | Sign In(POST)
-                    form.login(action="login_post", method="POST")
+                        | Sign In (GET)
+                    form.login(action="login_GET_TEST", method="GET")
                         input(type="text", placeholder="Username",name="username")
                         input(type="password", placeholder="Password",name="password")
                         input.btn.btn-success.btn-sm(type="submit", value="Sign In")

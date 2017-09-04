@@ -39,9 +39,10 @@ app.post('/steve/login_post', function(req, res) {
     var password=req.body.password;
     console.log(username);
     console.log(password);
-
-
+    res.sendfile('./main/login_post');;
 });
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
