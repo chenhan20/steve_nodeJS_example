@@ -1,0 +1,16 @@
+extends ../common/layout
+
+block nav_bar
+    link(href="/stylesheets/error.css", rel="stylesheet")
+    .error
+        .error-code.m-b-10.m-t-20
+            | 404 
+        h3.font-bold We couldn't find the page..
+        .error-desc
+            | Sorry, but the page you are looking for was either not found or does not exist. 
+            | 
+            br
+            |             Try refreshing the page or click the button below to go back to the Homepage.
+            div
+            a.login-detail-panel-button.btn(href='index')
+                |                         回首頁

@@ -36,7 +36,7 @@ router.post('/index', function(req, res, next) {
 
 
 router.get('*',function(req,res){
-  res.send('無此url!');
+  res.render('./main/error', { URL: '' });
 });
 
 

@@ -2,9 +2,9 @@ extends ../common/layout
 
 
 block append nav_bar
-    script(type="text/javascript", src='../js/example/example01.js')
     #root 
-    
+    //使用example01內的react去渲染root這個div所以js是要在div產生後去讀才會改變，原先一直放在前面難怪都沒變
+    script(type="text/javascript", src='../js/example/example01.js')
 
 
 
