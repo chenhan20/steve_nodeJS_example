@@ -9,6 +9,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 //路由新增一個提供使用
 var steve = require('./routes/steve');
+var example = require('./routes/example');
 
 var app = express();
 
@@ -31,16 +32,17 @@ app.use('/', index);
 app.use('/users', users);
 //路由新增
 app.use('/steve', steve);
+app.use('/example', example);
 
 //POST
-app.post('/steve/login_post', function(req, res) {
-    console.log("============login_post===============");
-    var username=req.body.username;
-    var password=req.body.password;
-    console.log(username);
-    console.log(password);
-    res.sendfile('./main/login_post');;
-});
+// app.post('/steve/login_post', function(req, res) {
+//     console.log("============login_post===============");
+//     var username=req.body.username;
+//     var password=req.body.password;
+//     console.log(username);
+//     console.log(password);
+//     res.sendfile('./main/login_post');;
+// });
 
 
 

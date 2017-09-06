@@ -1,35 +1,37 @@
 var express = require('express');
 var router = express.Router();
-var app=express();
+
 
 /* GET home page. */
 router.get('/login', function(req, res, next) {
-  res.render('./main/login', { title: 'login' });
+  res.render('./main/login', { exction: '' });
 });
 
-router.get('/login_post', function(req, res, next) {
-  res.sendfile('./main/login_post');
- // res.render('./main/login_post', { title: 'login_post' });
-});
-
-router.get('/login_GET', function(req, res, next) {
-  res.render('./main/login_GET', { title: 'GET' });
-});
-
-app.get('/steve/login_GET_TEST', function(req, res) {
-    console.log("============login_GET===============");
-    var username=req.query.username;
-    var password=req.query.password;
-    console.log(username);
-    console.log(password);
-    res.send(username + '謝謝你的回覆');
-
-});
 
 router.get('/index', function(req, res, next) {
-  res.render('./main/index', { title: 'index' });
-
+  res.render('./main/index', { 
+  title: 'Example',
+  secoend: 'react_example',
+  Accounts: '訪客'
+  });
 });
+
+
+//使用post的只有經過post才會經此段，固一定是有從登入那邊來，所以可在此判斷用戶資格
+router.post('/index', function(req, res, next) {
+  var accounts = req.body.username;
+  if(accounts=='123'){
+  res.render('./main/index', { 
+    title: 'Example',
+    secoend: '登入成功',
+    Accounts: accounts
+  });
+}else{
+  res.render('./main/login', { 
+    exction: '查無此用戶，請重新登入',
+  });
+}});
+
 
 
 

@@ -1,6 +1,7 @@
 extends ../common/layout
 
-block content
+block nav_bar
+block append head
     .container
         .row
             .col-md-12
@@ -11,9 +12,10 @@ block content
                         input(type="email", placeholder="Email")
                         input.pass-reset-submit.btn.btn-success.btn-sm(type="submit", value="Submit")
                 .wrap
+                    p.form-title=exction
                     p.form-title
-                        | Sign In(POST)
-                    form.login(action="login_post", method="POST")
+                        | Sign In
+                    form.login(action="index", method="POST")
                         input(type="text", placeholder="Username",name="username")
                         input(type="password", placeholder="Password",name="password")
                         input.btn.btn-success.btn-sm(type="submit", value="Sign In")
