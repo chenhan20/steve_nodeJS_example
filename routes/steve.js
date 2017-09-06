@@ -33,10 +33,8 @@ router.post('/index', function(req, res, next) {
 }});
 
 
-
-
 router.get('*',function(req,res){
-  res.render('./main/error', { URL: '' });
+  res.render('./main/error', { URL: req.originalUrl });
 });
 
 
