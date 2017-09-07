@@ -5,9 +5,9 @@
 :rocket: :metal: :octocat: 
 目標至少要做出crud的功能
 
-##目前問題
+## 目前問題
 nav_bar的dropdown不知道為何無法往下展開(尚未解決)
-##目前進度
+## 目前進度
 只做出檢核使用者，與react基礎了解
 
 
