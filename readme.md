@@ -15,9 +15,9 @@ nav_bar的dropdown不知道為何無法往下展開(尚未解決)
 
 ## 實作練習
 暫時沒有連資料庫，先設定帳號123就可進，若沒輸入123會顯示無用戶
-* [登入](fast-dusk-17760.herokuapp.com/steve/login)
-* [主頁面](fast-dusk-17760.herokuapp.com/steve/index)
-* [example](fast-dusk-17760.herokuapp.com/example/example02)
+* [登入](https://fast-dusk-17760.herokuapp.com/steve/login)
+* [主頁面](https://fast-dusk-17760.herokuapp.com/steve/index)
+* [example](https://fast-dusk-17760.herokuapp.com/example/example02)
 
 ---
 # 登入routes設定(nodejs的路由部分)
