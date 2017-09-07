@@ -7,7 +7,7 @@ router.get('/login', function(req, res, next) {
   res.render('./main/login', { exction: '' });
 });
 
-
+//直接輸入index進入此頁的話會走這邊
 router.get('/index', function(req, res, next) {
   res.render('./main/index', { 
   title: 'Example',
