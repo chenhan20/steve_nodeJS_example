@@ -11,7 +11,11 @@ router.get('/example01', function(req, res, next) {
 router.get('/example02', function(req, res, next) {
   res.render('./example/example02', { 
     title: 'Example',
-    secoend: 'react_example',
+  });
+});
+router.get('/example03', function(req, res, next) {
+  res.render('./example/example03', { 
+    title: 'Example03',
   });
 });
 
