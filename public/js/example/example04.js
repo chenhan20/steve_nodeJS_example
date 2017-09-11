@@ -26,11 +26,33 @@ $( "#button_2" ).click(function() {
     
     $("#example_02").text(list_01==list_02)//jquery 的.html()方法無法傳遞false，用test才行
 });
-//example03 尚未完成
-
-
+//example03 
 $( "#button_3" ).click(function() {
     var number_01=$("#inputBox_03").val();
-    $("#example_03").text("結果:"+number_01)
-    $("div.example_03").html("");
+    var number_01_size=number_01.length;
+    //先判斷一開始的輸入，若個位數就直接顯示了
+    if(isNaN(number_01)){
+        alert("請輸入數字謝謝~");
+        return;
+    }else if(number_01_size<=1){
+        $("#example_03").text("結果:"+number_01)
+        return;
+    }
+    
+    var number_list=number_01.split("");
+    var number_sum=0;    
+    while(number_01_size>1){
+        for(var s=0;s<number_01_size;s++){
+            number_sum = number_sum+parseInt(number_list[s]);    
+            console.log(number_sum.toString().length);              
+        }
+        //加總完之後，會將size與list都重製，再去判斷是否為1位數了
+        //若沒有，就會將number_sum歸零後再計算一次
+        number_01_size=number_sum.toString().length;
+        number_list=number_sum.toString().split("");
+        if(number_01_size>1){
+            number_sum=0;
+        }
+    }
+    $("#example_03").text("結果:"+number_sum)
 });
