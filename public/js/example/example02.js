@@ -69,7 +69,6 @@ ReactDOM.render(
 
 //------------------------example_05
 
-debugger;
 class TodoApp extends React.Component {
   constructor(props) {
     super(props);
