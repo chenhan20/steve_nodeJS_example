@@ -3,6 +3,7 @@ extends ../common/layout
 block nav_bar
 block append head
     script(src="/js/main/login.js")
+    link(href="/stylesheets/login.css", rel="stylesheet")
     .container
         .row
             .col-md-12
@@ -13,12 +14,14 @@ block append head
                         input(type="email", placeholder="Email")
                         input.pass-reset-submit.btn.btn-success.btn-sm(type="submit", value="Submit")
                 .wrap
-                    p#login_message.form-title=exction
+                    p.login_message.form-title=exction
                     p.form-title
                         | Sign In
+                        .alert_error.alert.alert-danger(role='alert')
+                            .alert_error_message.strong
                     form.login(action="index", method="POST",onsubmit='return chk();')
-                        input(type="text", placeholder="Username",name="username")
-                        input(type="password", placeholder="Password",name="password")
+                        input.username(type="text", placeholder="Username",name="username")
+                        input.password(type="password", placeholder="Password",name="password")
                         input#signin_btuuon.btn.btn-success.btn-sm(type="submit", value="Sign In")
                         .remember-forgot
                             .row
@@ -29,5 +32,4 @@ block append head
                                             |                                     Remember Me
                                 .col-md-6.forgot-pass-content
                                     a.forgot-pass(href="javascript:void(0)") Forgot Passwords
-            link(href="/stylesheets/login.css", rel="stylesheet")
 

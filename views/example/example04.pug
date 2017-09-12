@@ -9,10 +9,9 @@ block append nav_bar
             h4 LeetCode 344. Reverse String(相反輸出)
             #example_01 
             form
-                input#inputBox(type='text')
-                br
-                button#button_1.btn.btn-info.btn-lg(type='button') Click Me!
-            hr
+                .form-group
+                    input#inputBox(type='text')
+                    button#button_1.btn.btn-info.btn-lg(type='button') Click Me!
         .col-sm-4
             #example_02
             h4 LeetCode 242. Valid Anagram(判斷是否為重組字串)
@@ -22,7 +21,6 @@ block append nav_bar
                 input#inputBox_02(type='text')
                 br
                 button#button_2.btn.btn-info.btn-lg(type='button') Click Me!
-        hr
         .col-sm-4
             #example_03 
             h4 LeetCode 258. Add Digits(相加到剩下個位數)
@@ -30,23 +28,19 @@ block append nav_bar
             input#inputBox_03(type='text')
             br
             button#button_3.btn.btn-info.btn-lg(type='button') Click!!
-            hr
+    .container       
         .col-sm-4
             #example_04
             h4 LeetCode 171. Excel Sheet Column Number(英文轉數字)
             input#inputBox_04.form-control(type='text')
             br
-            button#button_4.btn.btn-info.btn-lg(type='button') Click!!
-
-        hr
+            button#button_4.btn.btn-info.btn-lg(type='button') Click!!      
         .col-sm-4
             h1 
             #example_05
             form(data-toggle='validator', rol   e='form')
                 input#inputBox_04.form-control(type='text',required='')
                 button#button_5.btn.btn-primary(type='submit') Submit
-
-            hr
         #example_06
 
 

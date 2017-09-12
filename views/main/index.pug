@@ -3,6 +3,15 @@ extends ../common/layout
 
 block append head
     script(type="text/javascript", src='../js/index.js')
+    link(href="/stylesheets/index.css", rel="stylesheet")
 block append nav_bar
-    h2 歡迎
-      small=Accounts
+
+    case Accounts
+        when "訪客"
+            h1 您好訪客!
+        default
+            .loginalert.alert.alert-success(role='alert')
+                strong=Accounts
+                |  You successfully read this important alert message.            
+                   
+

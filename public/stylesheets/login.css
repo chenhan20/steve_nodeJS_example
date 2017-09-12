@@ -179,4 +179,8 @@ form.login a:hover
     padding: 10px;
     left: 45%;
 }
+.alert_error{
+    width:20%;
+    margin:0px auto;
+}
 
