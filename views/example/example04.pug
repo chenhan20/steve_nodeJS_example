@@ -2,48 +2,73 @@ extends ../common/layout
 
 
 block append nav_bar
-    
-    // Modal
-    #myModal.modal.fade(role='dialog')
-      .modal-dialog
-        .modal-content
-          .modal-header
-            button.close(type='button', data-dismiss='modal') ×
-            h4.modal-title Modal Header
-          .modal-body
-            p Some text in the modal.
-          .modal-footer
-            button.btn.btn-default(type='button', data-dismiss='modal') Close
-    
-    h1=title
-    h4 LeetCode 344. Reverse String(相反輸出)
-    #example_01 
-    form
-        input#inputBox(type='text')
-        button#button_1.button_1(type='button') Click Me!
-    hr
-    #example_02
-    h4 LeetCode 242. Valid Anagram(判斷是否為重組字串)
-    form
-        input#inputBox_01(type='text')
-        br
-        input#inputBox_02(type='text')
-        br
-        button#button_2(type='button') Click Me!
-    hr
-    #example_03 
-    h4 LeetCode 258. Add Digits(相加到剩下個位數)
-    input#inputBox_03(type='text')
-    br
-    button#button_3.btn.btn-info.btn-lg(type='button', data-toggle='modal', data-target='#myModal') Open Modal
-    hr
-    #example_04
-    hr
-    #example_05
-    hr
-    #example_06
+  
+    .container
+        h1=title
+        .col-sm-4
+            h4 LeetCode 344. Reverse String(相反輸出)
+            #example_01 
+            form
+                input#inputBox(type='text')
+                br
+                button#button_1.btn.btn-info.btn-lg(type='button') Click Me!
+            hr
+        .col-sm-4
+            #example_02
+            h4 LeetCode 242. Valid Anagram(判斷是否為重組字串)
+            form
+                input#inputBox_01(type='text')
+                br
+                input#inputBox_02(type='text')
+                br
+                button#button_2.btn.btn-info.btn-lg(type='button') Click Me!
+        hr
+        .col-sm-4
+            #example_03 
+            h4 LeetCode 258. Add Digits(相加到剩下個位數)
+                small 結合Bootstrap的modal功能
+            input#inputBox_03(type='text')
+            br
+            button#button_3.btn.btn-info.btn-lg(type='button') Click!!
+            hr
+        .col-sm-4
+            #example_04
+            h4 LeetCode 171. Excel Sheet Column Number(英文轉數字)
+            input#inputBox_04.form-control(type='text')
+            br
+            button#button_4.btn.btn-info.btn-lg(type='button') Click!!
 
-    
+        hr
+        .col-sm-4
+            h1 
+            #example_05
+            form(data-toggle='validator', rol   e='form')
+                input#inputBox_04.form-control(type='text',required='')
+                button#button_5.btn.btn-primary(type='submit') Submit
+
+            hr
+        #example_06
+
+
+
+    #myModal.modal.fade(role='dialog')
+        .modal-dialog
+        // Modal content
+        .modal-content
+            .modal-header
+            button.close(type='button', data-dismiss='modal') ×
+            h4#modal-title.modal-title 
+            .modal-body
+            p#modal-body-p 
+            .modal-footer
+            button.btn.btn-default(type='button', data-dismiss='modal') Close
+
+    #myModa2.modal.fade(role='dialog')
+      .modal-dialog
+            .alert.alert-danger
+              strong#strong_text 
+              p#p_text_1 
+
  
 
     script(src="/babel/browser.min.js")

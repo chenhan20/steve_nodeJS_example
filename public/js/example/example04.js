@@ -27,32 +27,74 @@ $( "#button_2" ).click(function() {
     $("#example_02").text(list_01==list_02)//jquery 的.html()方法無法傳遞false，用test才行
 });
 //example03 
+//看解答後發現其實只要while(sum>10)就進迴圈繼續做，根本不用判斷是幾位數QQ
 $( "#button_3" ).click(function() {
     var number_01=$("#inputBox_03").val();
     var number_01_size=number_01.length;
     //先判斷一開始的輸入，若個位數就直接顯示了
-    if(isNaN(number_01)){
-        alert("請輸入數字謝謝~");
+    if(isNaN(number_01)||number_01==''){
+        $("#modal-title").text("錯誤!!!");
+        $("#modal-body-p").text("請輸入數字好嗎??");
+        $("#myModal").modal();
         return;
     }else if(number_01_size<=1){
         $("#example_03").text("結果:"+number_01)
+        $("#modal-title").text("輸入格式正確:");
+        $("#modal-body-p").text("結果:"+ number_01 +"="+number_01);
+        $("#myModal").modal();
         return;
     }
-    
+    var string_process="";
     var number_list=number_01.split("");
     var number_sum=0;    
     while(number_01_size>1){
         for(var s=0;s<number_01_size;s++){
-            number_sum = number_sum+parseInt(number_list[s]);    
-            console.log(number_sum.toString().length);              
+            if(s==number_01_size-1){
+                string_process += number_list[s];
+            }else{
+            string_process += number_list[s] + "+";
+            }
+            number_sum = number_sum+parseInt(number_list[s]);       
         }
         //加總完之後，會將size與list都重製，再去判斷是否為1位數了
         //若沒有，就會將number_sum歸零後再計算一次
         number_01_size=number_sum.toString().length;
         number_list=number_sum.toString().split("");
         if(number_01_size>1){
+            string_process += "=" + number_sum + " , ";
             number_sum=0;
         }
     }
+
     $("#example_03").text("結果:"+number_sum)
+    $("#modal-title").text("輸入格式正確:");
+    $("#modal-body-p").text("結果:"+ string_process +"="+number_sum);
+    $("#myModal").modal();   
 });
+
+// example04
+$( "#button_4" ).click(function() {
+    var string_ABC=$("#inputBox_04").val();
+    var regExp = /^[A-Za-z]*$/;
+    var boolean_ABC=regExp.test(string_ABC);
+    //
+    //debugger;
+    if(!boolean_ABC){
+        $("#myModa2").modal(); 
+            $("#strong_text").text("錯誤");
+            $("#p_text_1").text("請輸入英文謝謝");
+        return;   
+    }
+    string_ABC=string_ABC.toUpperCase();//轉大寫
+    var string_ABC_list=string_ABC.split("");
+    var sum_abc=0;
+    var exp=0;
+    for(var q=string_ABC_list.length-1;q>=0;q--){
+        var charcode=string_ABC.charCodeAt(q);
+        var v=string_ABC.charCodeAt(q)-64;
+        sum_abc+=v*Math.pow(26,exp++);
+    }
+        $("#myModa2").modal(); 
+        $("#strong_text").text("正確");
+        $("#p_text_1").text("結果為:"+sum_abc);
+}); 

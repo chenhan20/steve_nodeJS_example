@@ -6,9 +6,11 @@
 目標至少要做出crud的功能
 
 ## 目前問題
-nav_bar的dropdown不知道為何無法往下展開(尚未解決)
+nav_bar的dropdown不知道為何無法往下展開(以解決)--原因為沒載入bootstrap.js
+
 ## 目前進度
 只做出檢核使用者，與react基礎了解
+在example04做leetcode練習
 
 
 ---
@@ -17,7 +19,7 @@ nav_bar的dropdown不知道為何無法往下展開(尚未解決)
 暫時沒有連資料庫，先設定帳號123就可進，若沒輸入123會顯示無用戶
 * [登入](https://fast-dusk-17760.herokuapp.com/steve/login)
 * [主頁面](https://fast-dusk-17760.herokuapp.com/steve/index)
-* [example](https://fast-dusk-17760.herokuapp.com/example/example02)
+* [example](https://fast-dusk-17760.herokuapp.com/example/example04)
 
 ---
 # 登入routes設定(nodejs的路由部分)

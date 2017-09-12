@@ -1,0 +1,79 @@
+extends ../../common/layout
+
+block append nav_bar
+    h1 測試BOOTSTRAP MODAL功能
+    .container
+      .row
+        // Button trigger modal
+        button.btn.btn-primary.btn-lg(title='Share this content', data-toggle='modal', data-target='#myModal')
+          i.fa.fa-share-alt
+          |  Share
+        // Modal
+        #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+          .modal-dialog
+            .modal-content
+              .modal-header
+                button.close(type='button', data-dismiss='modal')
+                  span(aria-hidden='true') ×
+                  span.sr-only Close
+                h4#myModalLabel.modal-title
+                  i.fa.fa-share-alt
+                  |  Share
+              .modal-body
+                p
+                  a(title='Facebook', href='')
+                    span.fa-stack.fa-lg
+                      i.fa.fa-square-o.fa-stack-2x
+                      i.fa.fa-facebook.fa-stack-1x
+                  a(title='Twitter', href='')
+                    span.fa-stack.fa-lg
+                      i.fa.fa-square-o.fa-stack-2x
+                      i.fa.fa-twitter.fa-stack-1x
+                  a(title='Google+', href='')
+                    span.fa-stack.fa-lg
+                      i.fa.fa-square-o.fa-stack-2x
+                      i.fa.fa-google-plus.fa-stack-1x
+                  a(title='Linkedin', href='')
+                    span.fa-stack.fa-lg
+                      i.fa.fa-square-o.fa-stack-2x
+                      i.fa.fa-linkedin.fa-stack-1x
+                  a(title='Reddit', href='')
+                    span.fa-stack.fa-lg
+                      i.fa.fa-square-o.fa-stack-2x
+                      i.fa.fa-reddit.fa-stack-1x
+                  a(title='WordPress', href='')
+                    span.fa-stack.fa-lg
+                      i.fa.fa-square-o.fa-stack-2x
+                      i.fa.fa-wordpress.fa-stack-1x
+                  a(title='Digg', href='')
+                    span.fa-stack.fa-lg
+                      i.fa.fa-square-o.fa-stack-2x
+                      i.fa.fa-digg.fa-stack-1x
+                  a(title='Stumbleupon', href='')
+                    span.fa-stack.fa-lg
+                      i.fa.fa-square-o.fa-stack-2x
+                      i.fa.fa-stumbleupon.fa-stack-1x
+                  a(title='E-mail', href='')
+                    span.fa-stack.fa-lg
+                      i.fa.fa-square-o.fa-stack-2x
+                      i.fa.fa-envelope.fa-stack-1x
+                  a(title='Print', href='')
+                    span.fa-stack.fa-lg
+                      i.fa.fa-square-o.fa-stack-2x
+                      i.fa.fa-print.fa-stack-1x
+                h2
+                  i.fa.fa-envelope
+                  |  Newsletter
+                p Subscribe to our weekly Newsletter and stay tuned.
+                form(action='', method='post')
+                  .input-group
+                    span.input-group-addon
+                      i.fa.fa-envelope
+                    input.form-control(type='email', placeholder='your@email.com')
+                  br
+                  button.btn.btn-primary(type='submit', value='sub', name='sub')
+                    i.fa.fa-share
+                    |  Subscribe Now!
+              .modal-footer
+                button.btn.btn-default(type='button', data-dismiss='modal') Close
+

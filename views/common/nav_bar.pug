@@ -23,11 +23,13 @@ nav.navbar.navbar-default.navbar-inverse(role='navigation')
             li
               a(href='#') Something else here
             li.divider
+            li.disabled  
+              a(href='#') 以下Bootstrap 功能測試
+            li.divider 
             li
-              a(href='#') Separated link
-            li.divider
+              a(href='/steve/test_modal') modal測試
             li
-              a(href='#') One more separated link
+              a(href='/steve/bootstrap_tab_test') tab分頁測試
         li.dropdown
           a.dropdown-toggle(href='#', data-toggle='dropdown')
             | 飲食(diet) 
@@ -45,6 +47,19 @@ nav.navbar.navbar-default.navbar-inverse(role='navigation')
             li.divider
             li
               a(href='#') One more separated link
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown')
+            | 自主練習(example) 
+            span.caret
+          ul.dropdown-menu(role='menu')
+            li
+              a(href='/example/example01') example01(react)
+            li
+              a(href='/example/example02') example02(react)
+            li
+              a(href='/example/example03') example03(react)
+            li
+              a(href='/example/example04') example04(leetcode練習)  
       form.navbar-form.navbar-left(role='search')
         .form-group
           input.form-control(type='text', placeholder='Search')

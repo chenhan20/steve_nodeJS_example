@@ -16,6 +16,16 @@ router.get('/index', function(req, res, next) {
   });
 });
 
+//test bootstrap modal功能
+router.get('/test_modal',function(req,res,next){
+  res.render('./main/training/test_modal');
+});
+//test bootstrap tab(分頁)功能
+router.get('/bootstrap_tab_test',function(req,res,next){
+  res.render('./main/training/bootstrap_tab_test');
+});
+
+
 
 //使用post的只有經過post才會經此段，固一定是有從登入那邊來，所以可在此判斷用戶資格
 router.post('/index', function(req, res, next) {
@@ -36,8 +46,6 @@ router.post('/index', function(req, res, next) {
 router.get('*',function(req,res){
   res.render('./main/error', { URL: req.originalUrl });
 });
-
-
 
 
 
