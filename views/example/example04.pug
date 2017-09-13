@@ -2,46 +2,60 @@ extends ../common/layout
 
 
 block append nav_bar
-  
+block append left_pills
+    script(type='text/javascript').
+    h1=title
     .container
-        h1=title
-        .col-sm-4
-            h4 LeetCode 344. Reverse String(相反輸出)
-            #example_01 
-            form
-                .form-group
-                    input#inputBox(type='text')
-                    button#button_1.btn.btn-info.btn-lg(type='button') Click Me!
-        .col-sm-4
-            #example_02
-            h4 LeetCode 242. Valid Anagram(判斷是否為重組字串)
-            form
-                input#inputBox_01(type='text')
-                br
-                input#inputBox_02(type='text')
-                br
-                button#button_2.btn.btn-info.btn-lg(type='button') Click Me!
-        .col-sm-4
-            #example_03 
-            h4 LeetCode 258. Add Digits(相加到剩下個位數)
-                small 結合Bootstrap的modal功能
-            input#inputBox_03(type='text')
-            br
-            button#button_3.btn.btn-info.btn-lg(type='button') Click!!
-    .container       
-        .col-sm-4
-            #example_04
-            h4 LeetCode 171. Excel Sheet Column Number(英文轉數字)
-            input#inputBox_04.form-control(type='text')
-            br
-            button#button_4.btn.btn-info.btn-lg(type='button') Click!!      
-        .col-sm-4
-            h1 
-            #example_05
-            form(data-toggle='validator', rol   e='form')
-                input#inputBox_04.form-control(type='text',required='')
-                button#button_5.btn.btn-primary(type='submit') Submit
-        #example_06
+        .row
+            .equalheight
+                .col-sm-2
+                    h4 LeetCode 344. Reverse String(相反輸出)
+                    #example_01 
+                    form
+                        .form-group
+                            label 請隨便輸入:
+                            input#inputBox.form-control(type='text')
+                        button#button_1.btn.btn-primary(type='button') Click Me!
+                .col-sm-2
+                    #example_02
+                    h4 LeetCode 242. Valid Anagram(判斷是否為重組字串)
+                    form
+                        label 輸入兩組字串
+                        input#inputBox_01.form-control(type='text')
+                        input#inputBox_02.form-control(type='text')
+                    button#button_2.btn.btn-primary(type='button') Click Me!
+                .col-sm-2
+                    #example_03 
+                    h4 LeetCode 258. Add Digits(相加到剩下個位數)
+                        small 結合Bootstrap的modal功能
+                    form
+                        .form-group
+                            label 輸入:
+                            input#inputBox_03.form-control(type='text')
+                            small.form-text.text-muted 只能輸入數字
+                        button#button_3.btn.btn-primary(type='button') Click!!
+    
+    .container
+        .row
+            .equalheight       
+                .col-sm-2
+                    #example_04
+                    h4 LeetCode 171. Excel Sheet Column Number(英文轉數字)
+                    form
+                        .form-group
+                            label 請輸入一組英文
+                            input#inputBox_04.form-control(type='text')
+                            small.form-text.text-muted 只能輸入英文
+                        button#button_4.btn.btn-primary(type='button') Click!!      
+                .col-sm-2
+                    #example_05
+                    h4 LeetCode 283. Move Zeroes(移動陣列內的值)
+                    form(data-toggle='validator', role='form')
+                        label 請輸入一組陣列以逗號隔開
+                        input#inputBox_05.form-control(type='text',required='')
+                        small.form-text.text-muted 輸入數字
+                    button#button_5.btn.btn-primary(type='submit') Submit
+                #example_06
 
 
 
@@ -57,16 +71,29 @@ block append nav_bar
             .modal-footer
             button.btn.btn-default(type='button', data-dismiss='modal') Close
 
+    //錯誤訊息的modal
     #myModa2.modal.fade(role='dialog')
       .modal-dialog
             .alert.alert-danger
-              strong#strong_text 
-              p#p_text_1 
+              span.glyphicon.glyphicon-remove
+              strong#strong_text_danger
+              #p_text_danger 
+
+
+
+    //正確訊息的modal
+    #myModa3.modal.fade(role='dialog')
+      .modal-dialog
+            .alert.alert-success
+              span.glyphicon.glyphicon-ok
+              strong#strong_text_success 
+              p#p_text_success               
 
  
 
     script(src="/babel/browser.min.js")
     script(type="text/babel", src='../js/example/example04.js')
+    link(href="/stylesheets/example/example04.css", rel="stylesheet")
 
 
 

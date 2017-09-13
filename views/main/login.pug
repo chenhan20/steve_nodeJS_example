@@ -1,6 +1,7 @@
 extends ../common/layout
 
 block nav_bar
+block left_pills
 block append head
     script(src="/js/main/login.js")
     link(href="/stylesheets/login.css", rel="stylesheet")
@@ -23,6 +24,7 @@ block append head
                         input.username(type="text", placeholder="Username",name="username")
                         input.password(type="password", placeholder="Password",name="password")
                         input#signin_btuuon.btn.btn-success.btn-sm(type="submit", value="Sign In")
+                        .fb-login-button(data-width="250",data-max-rows='1', data-size='medium', data-button-type='continue_with', data-show-faces='true', data-auto-logout-link='false', data-use-continue-as='true',onlogin)
                         .remember-forgot
                             .row
                                 .col-md-6
@@ -32,4 +34,6 @@ block append head
                                             |                                     Remember Me
                                 .col-md-6.forgot-pass-content
                                     a.forgot-pass(href="javascript:void(0)") Forgot Passwords
+
+                    
 

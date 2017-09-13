@@ -81,8 +81,8 @@ $( "#button_4" ).click(function() {
     //debugger;
     if(!boolean_ABC){
         $("#myModa2").modal(); 
-            $("#strong_text").text("錯誤");
-            $("#p_text_1").text("請輸入英文謝謝");
+        $("#strong_text_danger").text("錯誤");
+        $("#p_text_danger").text("請輸入英文謝謝");
         return;   
     }
     string_ABC=string_ABC.toUpperCase();//轉大寫
@@ -94,7 +94,16 @@ $( "#button_4" ).click(function() {
         var v=string_ABC.charCodeAt(q)-64;
         sum_abc+=v*Math.pow(26,exp++);
     }
-        $("#myModa2").modal(); 
-        $("#strong_text").text("正確");
-        $("#p_text_1").text("結果為:"+sum_abc);
+        $("#myModa3").modal(); 
+        $("#strong_text_success").text("正確");
+        $("#p_text_success").text("結果為:"+sum_abc);
 }); 
+//example05
+$('#button_5').click(function(){
+    var ex5_val=$('#inputBox_05').val();
+    var ex5_split=ex5_val.split(",");
+
+
+
+    console.log(ex5_split);
+})

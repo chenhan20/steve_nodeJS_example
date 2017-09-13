@@ -183,4 +183,7 @@ form.login a:hover
     width:20%;
     margin:0px auto;
 }
+.fb-login-button{
+    margin-top: 10px;
+}
 
