@@ -5,7 +5,7 @@ block append nav_bar
 block append left_pills
     script(type='text/javascript').
     h1=title
-    .container
+    .container.col-sm-9
         .row
             .equalheight
                 .col-sm-2
@@ -34,9 +34,7 @@ block append left_pills
                             input#inputBox_03.form-control(type='text')
                             small.form-text.text-muted 只能輸入數字
                         button#button_3.btn.btn-primary(type='button') Click!!
-    
-    .container
-        .row
+                        .row
             .equalheight       
                 .col-sm-2
                     #example_04
@@ -56,13 +54,13 @@ block append left_pills
                         small.form-text.text-muted 輸入數字
                     button#button_5.btn.btn-primary(type='submit') Submit
                 #example_06
+    .container.col-sm-9
+
 
 
 
     #myModal.modal.fade(role='dialog')
-        .modal-dialog
-        // Modal content
-        .modal-content
+        .modal-content.col-sm-offset-4.col-sm-3
             .modal-header
             button.close(type='button', data-dismiss='modal') ×
             h4#modal-title.modal-title 
