@@ -1,4 +1,6 @@
-#left_pills{
+.left_pills{
     margin-left: 0px;
     padding-left: 0px;
+    padding-top:5px;
 }
+

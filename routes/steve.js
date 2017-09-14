@@ -24,6 +24,19 @@ router.get('/test_modal',function(req,res,next){
 router.get('/bootstrap_tab_test',function(req,res,next){
   res.render('./main/training/bootstrap_tab_test');
 });
+//胸(chest) 功能
+router.get('/chest',function(req,res,next){
+  res.render('./main/training/chest');
+});
+
+
+
+//後臺設定頁面
+router.get('/admin_index',function(req,res,next){
+  res.render('./main/admin/admin_index');
+});
+
+
 
 
 

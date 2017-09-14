@@ -1,2 +1,3 @@
-// debugger;
-// Accounts();
+// $(document).ready (function(){
+//    $('.video1').play();
+// })

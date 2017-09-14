@@ -4,13 +4,22 @@ extends ../common/layout
 block append head
     script(type="text/javascript", src='../js/index.js')
     link(href="/stylesheets/index.css", rel="stylesheet")
-block append nav_bar
+block append nav_bar           
+block left_pills
+block append carousel
     case Accounts
         when "訪客"
-            h1 您好訪客!
+            .container.col-sm-1
+            h5 您好訪客!
         default
+            .container.col-sm-2
             .loginalert.alert.alert-success(role='alert')
+                i.fa.fa-check-circle-o.fa-1x(aria-hidden="true")
                 strong=Accounts
-                |  You successfully read this important alert message.            
-                   
-
+                |成功登入.
+    .container-fluid.video_container
+      video(loop='', muted='',autoplay='')
+        source(src='https://www.mazdausa.com/siteassets/vehicles/2017/mazda6/vlp/overview/my17_m6_feelings_2.mp4', type='video/mp4')
+      .overlay-desc
+        h1 IS IT POSSIBLE TO ENGINEER A FEELING?
+           |JamieDornan SAY YES!

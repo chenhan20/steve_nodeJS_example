@@ -1,0 +1,25 @@
+.container-fulid
+  #myCarousel.carousel.slide(data-ride='carousel')
+    // Indicators
+    ol.carousel-indicators
+      li.active(data-target='#myCarousel', data-slide-to='0')
+      li(data-target='#myCarousel', data-slide-to='1')
+      li(data-target='#myCarousel', data-slide-to='2')
+    // Wrapper for slides
+    .carousel-inner
+      .item.active
+        img(src='https://www.mazdausa.com/siteassets/vehicles/2017/mazda6/vlp/gallery/2017-Mazda-6-headlight.jpg?', alt='Los Angeles', style='width:100%;')
+      .item
+        img(src='https://www.mazdausa.com/siteassets/vehicles/2017/mazda6/vlp/gallery/2017-Mazda-6-sedan.jpg?w=1800', alt='Chicago', style='width:100%;')
+      .item
+        img(src='https://www.mazdausa.com/siteassets/vehicles/2017/mazda6/vlp/gallery/2017-Mazda-6-tail-light.jpg?w=1800', alt='New york', style='width:100%;')
+    // Left and right controls
+    a.left.carousel-control(href='#myCarousel', data-slide='prev')
+      span.glyphicon.glyphicon-chevron-left
+      span.sr-only Previous
+    a.right.carousel-control(href='#myCarousel', data-slide='next')
+      span.glyphicon.glyphicon-chevron-right
+      span.sr-only Next
+
+
+
