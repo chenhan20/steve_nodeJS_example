@@ -23,4 +23,9 @@ router.get('/example04', function(req, res, next) {
     title: 'Example04',
   });
 });
+router.get('/example05', function(req, res, next) {
+  res.render('./example/example05', { 
+    title: 'Example05',
+  });
+});
 module.exports = router;
