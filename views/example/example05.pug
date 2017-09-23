@@ -4,8 +4,65 @@ block carousel
 block append nav_bar
 block  left_pills
     h1=title
-    .container.col-sm-9
-        h2 ex5
+    .container-fluid
+      h2 ex5
+      .row
+        form
+          .form-group.col-sm-2
+            label(for='sel1') 目前牌位:
+            select#sel1.form-control
+              option 銅牌Bronze
+              option 銀牌Silver
+              option 金牌Gold
+              option 白金Platinum        
+              option 鑽石Diamond
+              option 大師Master
+              option 菁英Challenger        
+          .form-group.col-sm-2          
+            label(for='sel2') 目前區間:
+            select#sel2.form-control
+              option 五區(V)
+              option 四區(IV)
+              option 三區(III)
+              option 二區(II)        
+              option 一區(I)
+          .form-group.col-sm-2  
+            label(for='sel3') 目前分數:
+            input.form-control.old_input_point(type='text')
+      .row
+        form
+          .form-group.col-sm-2
+            label(for='sel4') 目標牌位:
+            select#sel3.form-control
+              option 銅牌Bronze
+              option 銀牌Silver
+              option 金牌Gold
+              option 白金Platinum        
+              option 鑽石Diamond
+              option 大師Master
+              option 菁英Challenger        
+          .form-group.col-sm-2          
+            label(for='sel5') 目標區間:
+            select#sel4.form-control
+              option 五區(V)
+              option 四區(IV)
+              option 三區(III)
+              option 二區(II)        
+              option 一區(I)
+          .form-group.col-sm-2  
+            label(for='sel6') 目標分數:
+            input.form-control.new_input_point(type='text')
+          .col-sm-2
+            button.btn.btn-primary.form-control.btn_search(type='button') 查詢價格  
+
+      .row
+        .show_01
+          h3.title_01 
+          h3.text_01
+ 
+
+            
+        
              
 
  
